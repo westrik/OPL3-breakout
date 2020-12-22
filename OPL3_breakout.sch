@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L OPL3:YAC512-M U2
-U 1 1 5FE3D104
-P 6650 3550
-F 0 "U2" H 7150 3775 50  0000 C CNN
-F 1 "YAC512-M" H 7150 3684 50  0000 C CNN
-F 2 "OPL3:SOP127P780X200-16N" H 7050 3650 50  0001 C CNN
-F 3 "" H 7050 3650 50  0001 C CNN
-	1    6650 3550
-	1    0    0    -1  
-$EndComp
-$Comp
 L OPL3:YMF262-M U1
 U 1 1 5FE3EC8F
 P 3500 3550
@@ -111,11 +100,11 @@ $EndComp
 Wire Wire Line
 	4250 3650 5350 3650
 Wire Wire Line
-	5350 3950 6650 3950
+	5350 3950 6100 3950
 Wire Wire Line
 	5350 3950 5350 3650
 Wire Wire Line
-	4250 3850 6650 3850
+	4250 3850 5500 3850
 $Comp
 L power:GNDA #PWR0103
 U 1 1 5FE6421D
@@ -143,7 +132,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 3950 5250 3950
 Wire Wire Line
-	5250 4150 6650 4150
+	5250 4150 5500 4150
 Wire Wire Line
 	6500 3750 6500 4050
 Connection ~ 6500 3750
@@ -152,7 +141,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 4050 5150 4050
 Wire Wire Line
-	5150 4250 6650 4250
+	5150 4250 6100 4250
 Text Label 4500 4150 2    50   ~ 0
 D7
 Text Label 4500 4250 2    50   ~ 0
@@ -169,7 +158,6 @@ Text Label 3050 4550 0    50   ~ 0
 D1
 Text Label 3050 4450 0    50   ~ 0
 D0
-NoConn ~ 3300 4350
 Text Label 3050 4250 0    50   ~ 0
 YM_CS
 Text Label 3050 4050 0    50   ~ 0
@@ -214,7 +202,6 @@ Wire Wire Line
 Connection ~ 2650 3550
 Wire Wire Line
 	2650 4150 3300 4150
-NoConn ~ 7650 3650
 Wire Wire Line
 	7700 4250 7700 3350
 $Comp
@@ -418,4 +405,105 @@ Wire Wire Line
 	6100 2600 6000 2600
 Wire Wire Line
 	6100 2700 6000 2700
+$Comp
+L Connector:TestPoint_Small TP1
+U 1 1 5FFA06B6
+P 5500 3600
+F 0 "TP1" V 5685 3600 50  0000 C CNN
+F 1 "TP_DOAB" V 5594 3600 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 5700 3600 50  0001 C CNN
+F 3 "~" H 5700 3600 50  0001 C CNN
+	1    5500 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP2
+U 1 1 5FFA400A
+P 6100 3600
+F 0 "TP2" V 6285 3600 50  0000 C CNN
+F 1 "TP_CLK" V 6194 3600 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 6300 3600 50  0001 C CNN
+F 3 "~" H 6300 3600 50  0001 C CNN
+	1    6100 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP6
+U 1 1 5FFA75A2
+P 6100 4400
+F 0 "TP6" V 6054 4448 50  0000 L CNN
+F 1 "TP_SMP1" V 6145 4448 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 6300 4400 50  0001 C CNN
+F 3 "~" H 6300 4400 50  0001 C CNN
+	1    6100 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP5
+U 1 1 5FFA75A8
+P 5500 4400
+F 0 "TP5" V 5454 4448 50  0000 L CNN
+F 1 "TP_SMP2" V 5545 4448 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 5700 4400 50  0001 C CNN
+F 3 "~" H 5700 4400 50  0001 C CNN
+	1    5500 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 4400 6100 4250
+Connection ~ 6100 4250
+Wire Wire Line
+	6100 4250 6650 4250
+Wire Wire Line
+	5500 4400 5500 4150
+Connection ~ 5500 4150
+Wire Wire Line
+	5500 4150 6650 4150
+Wire Wire Line
+	5500 3600 5500 3850
+Connection ~ 5500 3850
+Wire Wire Line
+	5500 3850 6650 3850
+Wire Wire Line
+	6100 3600 6100 3950
+Connection ~ 6100 3950
+Wire Wire Line
+	6100 3950 6650 3950
+Wire Wire Line
+	3000 4350 3300 4350
+$Comp
+L OPL3:YAC512-M U2
+U 1 1 5FE3D104
+P 6650 3550
+F 0 "U2" H 7150 3775 50  0000 C CNN
+F 1 "YAC512-M" H 7150 3684 50  0000 C CNN
+F 2 "OPL3:SOP127P780X200-16N" H 7050 3650 50  0001 C CNN
+F 3 "" H 7050 3650 50  0001 C CNN
+	1    6650 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3650 8100 3650
+$Comp
+L Connector:TestPoint_Small TP3
+U 1 1 5FFC6402
+P 8100 3650
+F 0 "TP3" H 8148 3696 50  0000 L CNN
+F 1 "TP_TST2" H 8148 3605 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 8300 3650 50  0001 C CNN
+F 3 "~" H 8300 3650 50  0001 C CNN
+	1    8100 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP4
+U 1 1 5FFBB2DA
+P 3000 4350
+F 0 "TP4" H 2900 4250 50  0000 C CNN
+F 1 "TP_TEST" H 2800 4350 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 3200 4350 50  0001 C CNN
+F 3 "~" H 3200 4350 50  0001 C CNN
+	1    3000 4350
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
